@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <!--Input-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="INPUT DATA"
+        android:textSize="18pt"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/tvCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currency : "
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/title"/>
+    <EditText
+        android:id="@+id/etCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCurrency"
+        android:hint="Currency's Name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price : "
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/etCurrency"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPrice"
+        android:hint="Currency's Price"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/tvYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year : "
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/etPrice"/>
+    <EditText
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/etYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvYear"
+        android:hint="Year"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/tvFounder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Founder : "
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/etYear"/>
+    <EditText
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/etFounder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFounder"
+        android:hint="Currency's Founder"/>
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Submit"
+        android:backgroundTint="@color/purple_200"
+        />
+
+    <!--Output-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_main"
+        android:layout_margin="10dp"
+        android:background="@color/cardview_shadow_end_color"
+        android:layout_above="@+id/submit"
+        android:layout_below="@+id/etFounder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_crypto">
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
